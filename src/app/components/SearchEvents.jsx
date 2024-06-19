@@ -141,10 +141,10 @@ const SearchEvents = () => {
                 <button
                   key={index}
                   onClick={() => handlePageChange(index + 1)}
-                  className={`mx-1 px-3 py-1 rounded-[18px] ${
+                  className={`mx-1 px-[24px] py-[8px] rounded-[8px] ${
                     currentPage === index + 1
                       ? "bg-dark-primary text-light-secondary"
-                      : "bg-light-secondary text-dark-primary"
+                      : "bg-[#ECECEC] text-dark-primary"
                   }`}
                 >
                   {index + 1}
