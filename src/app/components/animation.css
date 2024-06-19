@@ -1,0 +1,120 @@
+.gradients {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  z-index: 1;
+  animation: moveGradient 4s infinite linear;
+}
+
+.designer {
+  right: 150px;
+  top: 150px;
+  animation: designerMove 4s infinite ease-in-out;
+}
+.dev {
+  bottom: 100px;
+  left: 200px;
+  animation: devMove 4s infinite ease-in-out;
+}
+
+.gradient1 {
+  top: var(--top1);
+  left: var(--left1);
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Adjust background color and opacity */
+}
+
+.gradient2 {
+  top: var(--top2);
+  right: var(--right2);
+  background-color: rgba(
+    255,
+    255,
+    0,
+    0.5
+  ); /* Adjust background color and opacity */
+}
+
+.gradient3 {
+  top: var(--top3);
+  left: var(--left3);
+  background-color: rgba(
+    0,
+    0,
+    255,
+    0.5
+  ); /* Adjust background color and opacity */
+}
+
+.gradient4 {
+  bottom: var(--bottom4);
+  left: var(--left4);
+  background-color: rgba(
+    255,
+    0,
+    0,
+    0.5
+  ); /* Adjust background color and opacity */
+}
+
+.gradient5 {
+  bottom: var(--bottom5);
+  right: var(--right5);
+  background-color: rgba(
+    255,
+    0,
+    0,
+    0.5
+  ); /* Adjust background color and opacity */
+}
+
+@keyframes moveGradient {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(var(--tx), var(--ty));
+  }
+}
+
+@keyframes designerMove {
+  0%,
+  100% {
+    top: 100px;
+  }
+  25% {
+    top: 150px;
+    right: 50px;
+  }
+  50% {
+    top: 250px;
+    right: 150px;
+  }
+  75% {
+    top: 150px;
+    right: 250px;
+  }
+}
+@keyframes devMove {
+  0%,
+  100% {
+    bottom: 100px;
+  }
+  25% {
+    bottom: 150px;
+    left: 270px;
+  }
+  50% {
+    bottom: 300px;
+    left: 150px;
+  }
+  75% {
+    bottom: 200px;
+    left: 130px;
+  }
+}
