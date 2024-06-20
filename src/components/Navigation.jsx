@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import styles from "../app/style";
 import Link from "next/link";
 import Image from "next/image";
-import Links from "./navigaiton/links/Links";
+import Links from "./navigation/links/Links";
 
 import { logo } from "../assets/img";
 

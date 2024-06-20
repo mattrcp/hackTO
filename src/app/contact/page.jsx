@@ -1,10 +1,10 @@
 import React from "react";
-import Navigation from "../components/Navigation";
-import Footer from "../components/Footer";
+import Navigation from "../../components/Navigation";
+import Footer from "../../components/Footer";
 import Image from "next/image";
 import { contact, gradient } from "../../assets/img";
 import styles from "../style";
-import Nav from "../components/navigaiton/Nav";
+import Nav from "../../components/navigation/Nav";
 
 const page = () => {
   return (

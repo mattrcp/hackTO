@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import Navigation from "../components/Navigation";
-import Footer from "../components/Footer";
+import Navigation from "../../components/Navigation";
+import Footer from "../../components/Footer";
 import styles from "../style";
 import { bigGrid, gradient } from "../../assets/img";
-import Nav from "../components/navigaiton/Nav";
+import Nav from "../../components/navigation/Nav";
 
 const page = () => {
   return (
