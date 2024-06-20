@@ -7,8 +7,8 @@ import {
   openai,
   ycombinator,
   youtube,
-} from "../../assets/img";
-import styles from "../style";
+} from "../assets/img";
+import styles from "../app/style";
 
 const images = [
   {

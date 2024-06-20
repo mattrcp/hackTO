@@ -1,12 +1,12 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import styles from "../style";
+import styles from "../app/style";
 import Link from "next/link";
 import Image from "next/image";
 import Links from "./navigaiton/links/Links";
 
-import { logo } from "../../assets/img";
+import { logo } from "../assets/img";
 
 const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);

@@ -1,8 +1,8 @@
 import React from "react";
-import styles from "../style";
-import { upcoming } from "../lib/data";
+import styles from "../app/style";
+import { upcoming } from "../app/lib/data";
 import Image from "next/image";
-import { MjMouse, mattMouse, natMouse } from "../../assets/img";
+import { MjMouse, mattMouse, natMouse } from "../assets/img";
 import Link from "next/link";
 
 const Upcoming = () => {

@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import styles from "../style";
+import styles from "../app/style";
 
 import "./animation.css";
 import {
@@ -12,7 +12,7 @@ import {
   mouse,
   devMouse,
   gradient,
-} from "../../assets/img";
+} from "../assets/img";
 
 const Hero = () => {
   return (

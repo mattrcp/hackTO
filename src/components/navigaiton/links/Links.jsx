@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { logo } from "../../../../assets/img";
+import { logo } from "../../../assets/img";
 
 const variants = {
   open: {

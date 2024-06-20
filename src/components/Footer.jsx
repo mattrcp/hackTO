@@ -1,8 +1,8 @@
 import React from "react";
-import styles from "../style";
+import styles from "../app/style";
 import Link from "next/link";
 import Image from "next/image";
-import { logo } from "../../assets/img";
+import { logo } from "../assets/img";
 
 const Footer = () => {
   return (

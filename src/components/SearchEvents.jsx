@@ -1,10 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
-import styles from "../style";
+import styles from "../app/style";
 import Image from "next/image";
-import { search } from "../../assets/img";
-import { events } from "../lib/data";
+import { search } from "../assets/img";
+import { events } from "../app/lib/data";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
