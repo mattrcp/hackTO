@@ -27,7 +27,7 @@ const styles = {
   navStyle:
     "flex w-full justify-between items-center py-[10px] px-[33px] rounded-[18px]",
 
-  margin: " mx-[8px] sm:mx-[16px] xl:mx-auto   2xl:mx-auto max-w-[1389px]",
+  margin: " mx-[8px] sm:mx-[16px] 2xl:mx-auto max-w-[1389px]",
   padding: "px-[8px] sm:px-[32px] py-[32px]",
   button: "bg-dark-primary hover:bg-dark-secondary  ease-in-out duration-300",
 };
