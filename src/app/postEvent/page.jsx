@@ -1,10 +1,9 @@
 "use client";
 import { useState } from "react";
-import React from "react";
 import FormEvent from "../../components/FormEvent";
 import Password from "../../components/Password";
 
-const page = () => {
+const Page = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   return (
@@ -18,4 +17,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
