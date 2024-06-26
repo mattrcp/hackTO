@@ -64,14 +64,6 @@ const SearchEvents = () => {
     exit: { opacity: 0, x: -50 },
   };
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
-
-  if (isError) {
-    return <div>Failed to load events.</div>;
-  }
-
   return (
     <div id="event" className={`mt-[96px] w-auto ${styles.margin}`}>
       <div
@@ -103,7 +95,21 @@ const SearchEvents = () => {
               }}
             />
           </div>
-          {currentEvents.length === 0 ? (
+          {isLoading && (
+            <div
+              className={`${styles.padding} bg-light-secondary rounded-[18px] text-center text-dark-primary`}
+            >
+              Loading...
+            </div>
+          )}
+          {isError && (
+            <div
+              className={`${styles.padding} bg-light-secondary rounded-[18px] text-center text-dark-primary`}
+            >
+              Failed to load events.
+            </div>
+          )}
+          {currentEvents.length === 0 && !isLoading && !isError && (
             <div className="flex flex-col pb-2 mb-4 duration-300 ease-in-out border-b-[1px] h-2/2 justify-center items-center">
               <div className="flex flex-col gap-[4px] p-[8px] text-center">
                 <h2 className={`${styles.headerLg}`}>😥</h2>
@@ -119,7 +125,8 @@ const SearchEvents = () => {
                 </p>
               </div>
             </div>
-          ) : (
+          )}
+          {currentEvents.length > 0 && (
             <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-[16px] overflow-hidden">
               <AnimatePresence mode="wait">
                 {currentEvents.map((data) => (
@@ -132,15 +139,6 @@ const SearchEvents = () => {
                     exit="exit"
                   >
                     <Link href={data.link}>
-                      {/* <div className="relative h-[239px] w-full mb-[16px]">
-                        <Image
-                          src={data.image}
-                          alt={data.title}
-                          layout="fill"
-                          objectFit="cover"
-                          className="rounded-[18px]"
-                        />
-                      </div> */}
                       <div className="flex flex-col gap-[4px] p-[8px]">
                         <h3
                           className={`text-display-xxs sm:text-display-xs font-body text-dark-primary font-base`}
