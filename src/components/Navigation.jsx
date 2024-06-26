@@ -25,7 +25,7 @@ const Navigation = () => {
 
   return (
     <div
-      className={` fixed top-[16px] w-full px-[18px] xl:px-0    z-50 left-1/2 transform -translate-x-1/2  xl:mx-auto   2xl:m-auto  max-w-[1389px] overflow-hidden  hidden sm:block`}
+      className={` fixed top-[16px] w-full px-[18px] xl:px-0 z-50 left-1/2 transform -translate-x-1/2  mx-auto   2xl:m-auto xl:max-w-[1248px] 2xl:max-w-[1389px] overflow-hidden  hidden sm:block`}
     >
       <div
         className={`${styles.navStyle} ${

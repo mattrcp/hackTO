@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "../app/style";
-import { upcoming } from "../app/lib/data";
 import Image from "next/image";
 import { MjMouse, mattMouse, natMouse } from "../assets/img";
 import Link from "next/link";

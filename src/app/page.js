@@ -6,6 +6,7 @@ import Sponsors from "../components/Sponsors";
 import Upcoming from "../components/Upcoming";
 import Nav from "../components/navigation/Nav";
 import Footer from "../components/Footer";
+import PickArticle from "../components/PickArticle";
 
 export default function Home() {
   return (
@@ -15,8 +16,9 @@ export default function Home() {
       <main className="">
         <Hero />
         {/* <Sponsors /> */}
-        <Upcoming />
+        {/* <Upcoming /> */}
         <SearchEvents />
+        <PickArticle />
       </main>
       <Footer />
     </div>

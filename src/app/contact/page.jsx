@@ -12,10 +12,10 @@ const page = () => {
       <Nav />
       <Navigation />
       <main
-        className={`  bg-light-secondary w-auto ${styles.padding} ${styles.margin} overflow-hidden rounded-[18px]   h-auto mt-[16px]`}
+        className={`  bg-light-secondary w-auto ${styles.padding} ${styles.margin} overflow-hidden rounded-[18px] relative   h-auto mt-[16px]`}
       >
-        <div className="flex flex-row items-center sm:justify-between mt-[68px] sm:mt-[168px] mb-[16px] sm:mb-[132px] flex-wrap gap-[32px] sm:gap-0">
-          <div className="w-full sm:w-[50%] h-fit">
+        <div className="flex flex-row items-center sm:justify-between mt-[68px] sm:mt-[168px] mb-[16px] sm:mb-[132px] flex-wrap gap-[32px] sm:gap-0 ">
+          <div className="w-full sm:w-[50%] h-fit z-30">
             <h1 className={`${styles.headerXl} mb-[24px] `}>
               Get in{" "}
               <strong className="relative px-2 bg-accent-yellow">touch</strong>{" "}
@@ -64,12 +64,12 @@ const page = () => {
               objectFit="cover"
               className="relative w-full h-auto"
             />
-          </div>
-        </div>
+          </div>{" "}
+        </div>{" "}
         <Image
           src={gradient}
           alt="gradient"
-          className="absolute z-1 rotate-[90deg] lg:rotate-0 h-auto sm:h-full left-0 top-0  sm:w-[1389px] hidden sm:block"
+          className="absolute z-0 rotate-[90deg] lg:rotate-0 h-auto sm:h-full right-0 top-0  sm:w-[1389px] hidden sm:block"
         />
       </main>
       <Footer />
