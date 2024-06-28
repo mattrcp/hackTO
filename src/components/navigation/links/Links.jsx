@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { logo } from "../../../assets/img";
+import { logo, logo2 } from "../../../assets/img";
 
 const variants = {
   open: {
@@ -51,16 +51,15 @@ function Links() {
           >
             About
           </Link>
-          <Link
+          {/* <Link
             href="/contact"
             className={`font-body font-normal text-light-secondary text-body-lg hover:font-bold ease-in-out duration-300`}
           >
             Contact
-          </Link>
+          </Link> */}
         </nav>
-        <a href="/">
-          <Image src={logo} alt="HackTO Logo" />
-          {/* BizDevDesign */}
+        <a href="/" className="h-[50px] w-auto">
+          <Image src={logo2} alt="TrioTO Logo" className="w-auto h-full" />
         </a>
       </motion.div>
     </motion.div>

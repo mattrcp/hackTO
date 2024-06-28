@@ -25,7 +25,7 @@ const Navigation = () => {
 
   return (
     <div
-      className={` fixed top-[16px] w-full px-[18px] xl:px-0 z-50 left-1/2 transform -translate-x-1/2  mx-auto   2xl:m-auto xl:max-w-[1248px] 2xl:max-w-[1389px] overflow-hidden  hidden sm:block`}
+      className={` fixed top-[16px] w-full px-[18px] xl:px-0 z-50 left-1/2 transform -translate-x-1/2  mx-auto   2xl:m-auto xl:max-w-[1465px] 2xl:max-w-[1589px] overflow-hidden  hidden sm:block`}
     >
       <div
         className={`${styles.navStyle} ${
@@ -34,6 +34,9 @@ const Navigation = () => {
             : "bg-inherit"
         } w-full `}
       >
+        <a href="/" className="h-[50px] w-auto">
+          <Image src={logo} alt="TrioTO Logo" className="w-full h-full" />
+        </a>
         <nav className=" flex items-center gap-[24px] sm:gap-[32px] ">
           <Link href="/" className={`${styles.navText}`}>
             Home
@@ -41,13 +44,10 @@ const Navigation = () => {
           <Link href="/about" className={`${styles.navText}`}>
             About
           </Link>
-          <Link href="/contact" className={`${styles.navText}`}>
+          {/* <Link href="/contact" className={`${styles.navText}`}>
             Contact
-          </Link>
+          </Link> */}
         </nav>
-        <a href="/">
-          <Image src={logo} alt="HackTO Logo" />
-        </a>
       </div>
     </div>
   );
