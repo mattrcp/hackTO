@@ -23,6 +23,7 @@ import upEvent2 from "./upevent2.jpeg";
 import upEvent3 from "./upevent3.jpeg";
 import bigGrid from "./bigGrid.svg";
 import contact from "./contact.svg";
+import logo2 from "./logo2.svg";
 
 export {
   mouse,
@@ -50,4 +51,5 @@ export {
   upEvent3,
   bigGrid,
   contact,
+  logo2,
 };
