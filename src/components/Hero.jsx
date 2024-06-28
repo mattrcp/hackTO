@@ -12,6 +12,9 @@ import {
   mouse,
   devMouse,
   gradient,
+  upEvent1,
+  upEvent2,
+  upEvent3,
 } from "../assets/img";
 
 const Hero = () => {
@@ -19,22 +22,28 @@ const Hero = () => {
     <div
       className={` bg-light-secondary rounded-[18px] ${styles.padding} flex flex-col items-start lg:justify-center relative gap-[16px] overflow-hidden h-auto  ${styles.margin} w-auto mt-[16px] `}
     >
-      <div className="flex items-center  md:justify-center lg:justify-between  mt-[40px] lg:mt-[80px] z-10 mb-[16px] flex-wrap lg:flex-nowrap overflow-hidden w-full ">
-        <div className="mb-[16px] md:mb-6 lg:mb-0">
-          <h1 className={`${styles.headerXl} mb-[16px] w-auto`}>
-            Where you can change <br /> the world with an{" "}
-            <strong className="relative px-2 bg-accent-yellow">idea.</strong>
+      <div className="flex items-center sm:items-start md:justify-center lg:justify-start  mt-[40px] lg:mt-[80px] z-10 mb-[16px] flex-wrap lg:flex-nowrap overflow-hidden w-full ">
+        <div className="mb-[16px] md:mb-6 lg:mb-0 w-auto xl:w-[681px] mr-0 xl:mr-40">
+          <h1 className={`${styles.headerXl}  w-auto mb-8`}>
+            <span>
+              {" "}
+              Where you can change <br className="hidden sm:block" /> the world
+              with an
+            </span>{" "}
+            <span className="relative px-2 bg-accent-yellow">idea.</span>
           </h1>
           <p
-            className={`${styles.bodyMd} ${styles.bodyBase} mb-[40px] max-w-[800px]`}
+            className={`${styles.bodyMd} ${styles.bodyBase} mb-[40px] max-w-[800px] `}
           >
+            If you are a{" "}
             <span className={`${styles.bodySemi}`}>
-              Unleash your creativity, test your ideas, and gain invaluable
-              experience.
+              future designer, developer, or entrepreneur
             </span>{" "}
-            Whoever you&apos;re a seasoned developer, a curious student, or
-            someone passionate about technology, HackTO is the ultimate platform
-            for exploration and growth.
+            who wants to turn your ideas into reality, we&apos;re here to
+            support you. Our website will provide access to a pool of hackathons
+            or any tech event so you can pick the right one; you can also access
+            our resources and our picked articles, making it the perfect place
+            to test your ideas or even generate new ones with your creativity.
           </p>
           <div>
             <a
@@ -46,7 +55,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="relative w-auto ">
-          <Image src={imgHeader} alt="animation" className="w-auto" />
+          <Image src={imgHeader} alt="animation" className="w-full" />
           <Image src={mouse} alt="mouse" className="absolute designer" />
           <Image src={devMouse} alt="mouse" className="absolute dev" />
         </div>
@@ -54,22 +63,22 @@ const Hero = () => {
       <div className="flex gap-[16px] w-full flex-wrap  justify-start sm:justify-between h-auto sm:h-[224px] z-10 relative flex-row sm:flex-col  ">
         <div className="relative  w-full sm:w-auto  h-[224px]">
           <Image
-            src={productSchool1}
-            alt=""
+            src={upEvent1}
+            alt="An event where people sit looking at the presentation."
             className="rounded-[18px] object-cover  w-full h-full"
           />
         </div>
         <div className="relative w-full sm:w-auto   h-[224px]">
           <Image
-            src={productSchool3}
-            alt=""
+            src={upEvent2}
+            alt="People are taking note of the event."
             className="rounded-[18px] object-cover  w-full  h-full"
           />
         </div>
         <div className="relative  w-full sm:w-auto  h-[224px]">
           <Image
-            src={productSchool2}
-            alt=""
+            src={upEvent3}
+            alt="People looking at the presentation."
             className="rounded-[18px] object-cover  w-full h-full"
           />
         </div>
@@ -77,7 +86,7 @@ const Hero = () => {
       <Image
         src={gradient}
         alt="gradient"
-        className="absolute z-1 rotate-[90deg] lg:rotate-0 h-auto sm:h-full w-full sm:w-[1300px] hidden sm:block"
+        className="absolute z-1 rotate-[90deg] sm:rotate-0 h-auto sm:h-full w-full sm:w-[1300px] top-0 sm:top-none hidden sm:block"
       />
     </div>
   );

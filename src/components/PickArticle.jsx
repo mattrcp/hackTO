@@ -51,7 +51,7 @@ const PickArticle = () => {
       className={`${styles.padding} ${styles.margin} h-full bg-light-secondary rounded-[18px] w-auto relative overflow-hidden mt-[56px]`}
     >
       <h2 className={`${styles.headerMd} mb-[24px]`}>
-        Our weekly pick articles
+        🗞️ Our weekly pick articles
       </h2>
       {loading && (
         <div
