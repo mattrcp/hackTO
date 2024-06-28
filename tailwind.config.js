@@ -20,7 +20,7 @@ module.exports = {
       },
       fontSize: {
         "display-xl": [
-          "3rem",
+          "3.5rem",
           {
             lineHeight: "4.25rem",
           },
