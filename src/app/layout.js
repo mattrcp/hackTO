@@ -14,7 +14,7 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Trio.TO",
+  title: "Trio.TO, where you can find tech events in Toronto",
   description:
     "Trio.TO is dedicated to helping future designers, developers, and entrepreneurs join an exciting hackathon event in Toronto. We provide engaging articles on tech and valuable resources to boost your knowledge and skills.",
 };
@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{metadata.title}</title>
-        <meta description={metadata.description} />
+        <meta name="description" content={metadata.description} />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
