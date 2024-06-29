@@ -41,9 +41,7 @@ const Hero = () => {
             </span>{" "}
             who wants to turn your ideas into reality, we&apos;re here to
             support you. Our website will provide access to a pool of hackathons
-            or any tech event so you can pick the right one; you can also access
-            our resources and our picked articles, making it the perfect place
-            to test your ideas or even generate new ones with your creativity.
+            or any tech event so you can pick the right one.
           </p>
           <div>
             <a
