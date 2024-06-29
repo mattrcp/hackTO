@@ -154,8 +154,8 @@ const SearchEvents = () => {
                         <p
                           className={`${styles.bodySm} ${styles.bodyLight} text-[#5E5E5E] mb-[4px]`}
                         >
-                          {data.location.venue}, {data.location.city},{" "}
-                          {data.location.state}, {data.location.country}
+                          {data.location.venue} {data.location.city}{" "}
+                          {data.location.state} {data.location.country}
                         </p>
                         <p
                           className={`${styles.bodySm} ${styles.bodyBase} text-[#5E5E5E]`}

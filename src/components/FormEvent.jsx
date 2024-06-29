@@ -28,7 +28,7 @@ const FormEvent = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!title || !description || !location.venue || !date.year || !time) {
+    if (!title || !description || !date.year || !time) {
       alert("Please fill in all required fields.");
       return;
     }
