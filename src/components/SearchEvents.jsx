@@ -205,6 +205,20 @@ const SearchEvents = () => {
               ))}
             </div>
           )}
+          <div className="flex items-center justify-start h-auto gap-4">
+            <div
+              className={`${styles.bodySm} flex gap-2 items-center justify-start`}
+            >
+              <div className="px-[16px] py-[8px] bg-accent-tag-pink rounded-full text-body-sm h-4 w-4"></div>
+              Cost of the ticket
+            </div>
+            <div
+              className={`${styles.bodySm} flex gap-2 items-center justify-start`}
+            >
+              <div className="px-[16px] py-[8px] bg-accent-tag-yellow rounded-full text-body-sm h-4 w-4"></div>
+              Winner reward
+            </div>
+          </div>
         </div>
       </div>
     </div>
