@@ -16,7 +16,7 @@ const poppins = Poppins({
 export const metadata = {
   title: "Trio.TO, where you can find tech events in Toronto",
   description:
-    "Trio.TO is dedicated to helping future designers, developers, and entrepreneurs join an exciting hackathon event in Toronto. We provide engaging articles on tech and valuable resources to boost your knowledge and skills.",
+    "Trio.TO is a community to helping future designers, developers, and entrepreneurs join an exciting hackathon event in Toronto. We provide engaging articles on tech and valuable resources to boost your knowledge and skills.",
 };
 
 export default function RootLayout({ children }) {
