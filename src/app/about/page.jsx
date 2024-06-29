@@ -54,8 +54,7 @@ const page = () => {
                 Our goal
               </h2>
               <p className={`${styles.bodyBase}  ${styles.bodyMd} w-[226px]`}>
-                We aim to help innovator expand their skills by using hackathons
-                to develop their playground and experience.
+                Where everyone can access tech events in Toronto on one website.
               </p>
             </div>
           </div>

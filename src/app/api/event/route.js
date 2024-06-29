@@ -2,6 +2,22 @@ import { connectEventDB } from "../../../libs/server";
 import Event from "../../../models/event";
 import { NextResponse } from "next/server";
 
+const setCORSHeaders = (response) => {
+  response.headers.set(
+    "Access-Control-Allow-Origin",
+    "https://www.trioto.club"
+  );
+  response.headers.set(
+    "Access-Control-Allow-Methods",
+    "GET, POST, PUT, DELETE, OPTIONS"
+  );
+  response.headers.set(
+    "Access-Control-Allow-Headers",
+    "Content-Type, Authorization"
+  );
+  return response;
+};
+
 export async function POST(req) {
   try {
     const {
@@ -38,16 +54,18 @@ export async function POST(req) {
     });
 
     // Respond with success message
-    return NextResponse.json(
+    const response = NextResponse.json(
       { message: "Event created successfully", event: newEvent },
       { status: 201 }
     );
+    return setCORSHeaders(response);
   } catch (error) {
     console.error("Error creating event:", error);
-    return NextResponse.json(
+    const response = NextResponse.json(
       { error: "Failed to create event" },
       { status: 500 }
     );
+    return setCORSHeaders(response);
   }
 }
 
@@ -65,12 +83,19 @@ export async function GET() {
     console.log("Fetched events:", events);
 
     // Respond with the fetched events
-    return NextResponse.json({ events });
+    const response = NextResponse.json({ events });
+    return setCORSHeaders(response);
   } catch (error) {
     console.error("Error fetching events:", error);
-    return NextResponse.json(
+    const response = NextResponse.json(
       { error: "Failed to fetch events" },
       { status: 500 }
     );
+    return setCORSHeaders(response);
   }
+}
+
+export async function OPTIONS() {
+  const response = new NextResponse(null, { status: 204 });
+  return setCORSHeaders(response);
 }
