@@ -24,6 +24,9 @@ const Hero = () => {
     >
       <div className="flex items-center sm:items-start md:justify-center lg:justify-start  mt-[40px] lg:mt-[80px] z-10 mb-[16px] flex-wrap lg:flex-nowrap overflow-hidden w-full ">
         <div className="mb-[16px] md:mb-6 lg:mb-0 w-auto xl:w-[681px] mr-0 xl:mr-40">
+          <p className={`${styles.bodyMd} text-dark-primary mb-4 mt-4`}>
+            Trio.TO is a community
+          </p>
           <h1 className={`${styles.headerXl}  w-auto mb-8`}>
             <span>
               {" "}
@@ -39,16 +42,16 @@ const Hero = () => {
             <span className={`${styles.bodySemi}`}>
               future designer, developer, or entrepreneur
             </span>{" "}
-            who wants to turn your ideas into reality, we&apos;re here to
-            support you. Our website will provide access to a pool of hackathons
-            or any tech event so you can pick the right one.
+            in Toronto, who wants to turn your ideas into reality. Trio.TO is a
+            tech community where we help you find the events that help you grow
+            in your career path.
           </p>
           <div>
             <a
               href="#event"
               className={`${styles.button} text-light-secondary px-[24px] py-[12px] bg-dark-primary rounded-[18px] flex items-center justify-between w-fit text-body-md font-body gap-4`}
             >
-              <Image src={search} alt="search icon" /> Search for event
+              <Image src={search} alt="search icon" /> Search event in Toronto
             </a>
           </div>
         </div>
