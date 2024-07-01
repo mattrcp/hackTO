@@ -65,7 +65,10 @@ const SearchEvents = () => {
   };
 
   return (
-    <div id="event" className={`mt-[96px] w-auto ${styles.margin}`}>
+    <div
+      id="event"
+      className={`mt-[40px] sm:mt-[96px] w-auto ${styles.margin}`}
+    >
       <div
         className={`flex mx-auto md:ml-[50px] gap-[8px] sm:gap-[16px] px-[16px] sm:px-0 items-center justify-center sm:justify-start w-auto relative `}
       >
