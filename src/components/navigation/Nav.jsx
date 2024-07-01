@@ -6,16 +6,14 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 const variants = {
-  open: (height = 1000) => ({
-    clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
+  open: {
     transition: {
       type: "spring",
       stiffness: 20,
       restDelta: 2,
     },
-  }),
+  },
   closed: {
-    clipPath: "circle(30px at 40px 40px)",
     transition: {
       delay: 0.5,
       type: "spring",
@@ -30,7 +28,9 @@ function Nav() {
 
   return (
     <motion.div
-      className="fixed z-[999] bg-dark-primary flex flex-col align-middle justify-center top-0 w-screen h-full ease-in-out duration-200  sm:hidden"
+      className={`fixed z-[999] ${
+        open ? "bg-dark-primary" : "null"
+      }  flex flex-col align-middle justify-center top-0 w-screen h-full ease-in-out duration-200 sm:hidden`}
       variants={variants}
       animate={open ? "open" : "closed"}
     >
