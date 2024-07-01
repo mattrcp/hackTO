@@ -100,6 +100,7 @@ const PickArticle = () => {
               <Link
                 href={article.link}
                 className={`${styles.bodySm} ${styles.bodySemi}`}
+                target="_blank"
               >
                 Click here to read more about the article.
               </Link>
