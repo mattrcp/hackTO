@@ -67,13 +67,6 @@ const PickArticle = () => {
             Loading...
           </div>
         ) : null}
-        {articles.length === 0 && (
-          <div
-            className={`${styles.padding} ${styles.margin} text-center ${styles.bodyLarge}`}
-          >
-            Sorry, we couldn&apos;t find any articles.
-          </div>
-        )}
         {articles.map((article, index) => (
           <div
             className="flex flex-col pb-2 mb-4 duration-300 ease-in-out border-b-[1px]"
