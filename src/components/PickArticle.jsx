@@ -42,7 +42,7 @@ const PickArticle = () => {
   if (loading) {
     return (
       <div
-        className={`${styles.padding} bg-light-secondary rounded-[18px] text-center text-dark-primary`}
+        className={`${styles.padding} ${styles.margin} bg-light-secondary rounded-[18px] text-center text-dark-primary`}
       >
         Loading...
       </div>
