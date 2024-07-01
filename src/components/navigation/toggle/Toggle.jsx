@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 function Toggle({ setOpen }) {
   return (
     <button
-      className="absolute w-[50px] h-[50px] rounded-full top-[5px] left-[15px] border-none cursor-pointer z-9999 bg-dark-primary"
+      className="absolute w-[50px] h-[50px] rounded-full top-[15px] left-[15px] border-none cursor-pointer z-9999 bg-dark-primary"
       onClick={() => setOpen((prev) => !prev)}
     >
       <div className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
