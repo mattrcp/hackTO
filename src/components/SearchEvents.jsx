@@ -141,7 +141,7 @@ const SearchEvents = () => {
                     animate="animate"
                     exit="exit"
                   >
-                    <Link href={data.link}>
+                    <Link href={data.link} target="_blank">
                       <div className="flex flex-col gap-[4px] p-[8px]">
                         <h3
                           className={`text-display-xxs sm:text-display-xs font-body text-dark-primary font-base`}
