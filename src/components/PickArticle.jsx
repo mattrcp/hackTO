@@ -39,16 +39,6 @@ const PickArticle = () => {
     fetchArticles();
   }, []);
 
-  if (loading) {
-    return (
-      <div
-        className={`${styles.padding} ${styles.margin} bg-light-secondary rounded-[18px] text-center text-dark-primary`}
-      >
-        Loading...
-      </div>
-    );
-  }
-
   if (error) {
     return (
       <div
@@ -66,16 +56,24 @@ const PickArticle = () => {
       <h2 className={`${styles.headerMd} mb-[24px]`}>
         🗞️ Our weekly pick articles
       </h2>
-      {articles.length === 0 && (
-        <div
-          className={`${styles.padding} ${styles.margin} text-center ${styles.bodyLarge}`}
-        >
-          Sorry, we couldn&apos;t find any articles.
-        </div>
-      )}
+
       <div
         className={`grid grid-cols-1 sm:grid-cols-3 gap-[16px] overflow-hidden`}
       >
+        {loading ? (
+          <div
+            className={` bg-light-secondary rounded-[18px] text-center text-dark-primary`}
+          >
+            Loading...
+          </div>
+        ) : null}
+        {articles.length === 0 && (
+          <div
+            className={`${styles.padding} ${styles.margin} text-center ${styles.bodyLarge}`}
+          >
+            Sorry, we couldn&apos;t find any articles.
+          </div>
+        )}
         {articles.map((article, index) => (
           <div
             className="flex flex-col pb-2 mb-4 duration-300 ease-in-out border-b-[1px]"
