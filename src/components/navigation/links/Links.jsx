@@ -36,7 +36,7 @@ function Links() {
     >
       <motion.div
         variants={itemVariants}
-        className="flex flex-col justify-between w-full h-[100%]"
+        className="flex flex-col justify-between w-full h-[80%]"
       >
         <nav className=" flex items-start flex-col gap-[24px] sm:gap-[32px] ">
           <Link
