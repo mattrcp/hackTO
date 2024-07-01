@@ -80,7 +80,7 @@ export async function GET() {
     // Fetch all events
     const events = await EventModel.find();
 
-    console.log("Fetched events:", events);
+    // console.log("Fetched events:", events);
 
     // Respond with the fetched events
     const response = NextResponse.json({ events });
