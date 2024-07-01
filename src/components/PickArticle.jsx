@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "../app/style";
 import Link from "next/link";
+import SkeletonArticle from "../components/skeleton/SkeletonArticle";
 
 const PickArticle = () => {
   const [articles, setArticles] = useState([]);
@@ -61,43 +62,40 @@ const PickArticle = () => {
         className={`grid grid-cols-1 sm:grid-cols-3 gap-[16px] overflow-hidden`}
       >
         {loading ? (
-          <div
-            className={` bg-light-secondary rounded-[18px] text-center text-dark-primary`}
-          >
-            Loading...
-          </div>
-        ) : null}
-        {articles.map((article, index) => (
-          <div
-            className="flex flex-col pb-2 mb-4 duration-300 ease-in-out border-b-[1px]"
-            key={index}
-          >
-            <div className="flex flex-col gap-[4px] p-[8px]">
-              <h3
-                className={`${styles.bodyLarge} ${styles.bodySemi} text-dark-primary mb-2`}
-              >
-                {article.title}
-              </h3>
-              <p
-                className={`${styles.bodyMd} ${styles.bodyBase} text-primary-dark mb-2`}
-              >
-                {article.description}
-              </p>
-              <p
-                className={`${styles.bodySm} ${styles.bodyBase} text-primary-dark mb-[4px]`}
-              >
-                Credit: {article.author}
-              </p>
-              <Link
-                href={article.link}
-                className={`${styles.bodySm} ${styles.bodySemi}`}
-                target="_blank"
-              >
-                Click here to read more about the article.
-              </Link>
+          <SkeletonArticle />
+        ) : (
+          articles.map((article, index) => (
+            <div
+              className="flex flex-col pb-2 mb-4 duration-300 ease-in-out border-b-[1px]"
+              key={index}
+            >
+              <div className="flex flex-col gap-[4px] p-[8px]">
+                <h3
+                  className={`${styles.bodyLarge} ${styles.bodySemi} text-dark-primary mb-2`}
+                >
+                  {article.title}
+                </h3>
+                <p
+                  className={`${styles.bodyMd} ${styles.bodyBase} text-primary-dark mb-2`}
+                >
+                  {article.description}
+                </p>
+                <p
+                  className={`${styles.bodySm} ${styles.bodyBase} text-primary-dark mb-[4px]`}
+                >
+                  Credit: {article.author}
+                </p>
+                <Link
+                  href={article.link}
+                  className={`${styles.bodySm} ${styles.bodySemi}`}
+                  target="_blank"
+                >
+                  Click here to read more about the article.
+                </Link>
+              </div>
             </div>
-          </div>
-        ))}
+          ))
+        )}
       </div>
     </div>
   );

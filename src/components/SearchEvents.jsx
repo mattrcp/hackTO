@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import styles from "../app/style";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import SkeletonEvent from "../components/skeleton/SkeletonEvent";
 
 const SearchEvents = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -98,13 +99,7 @@ const SearchEvents = () => {
               }}
             />
           </div>
-          {isLoading && (
-            <div
-              className={`${styles.padding} bg-light-secondary rounded-[18px] text-center text-dark-primary`}
-            >
-              Loading...
-            </div>
-          )}
+
           {isError && (
             <div
               className={`${styles.padding} bg-light-secondary rounded-[18px] text-center text-dark-primary`}
@@ -112,27 +107,17 @@ const SearchEvents = () => {
               Failed to load events.
             </div>
           )}
-          {currentEvents.length === 0 && !isLoading && !isError && (
-            <div className="flex flex-col pb-2 mb-4 duration-300 ease-in-out border-b-[1px] h-2/2 justify-center items-center">
-              <div className="flex flex-col gap-[4px] p-[8px] text-center">
-                <h2 className={`${styles.headerLg}`}>😥</h2>
-                <h3
-                  className={`text-display-xxs sm:text-display-xs font-body text-dark-primary font-base`}
-                >
-                  We are currently looking for a Hackathon event.
-                </h3>
-                <p
-                  className={`${styles.bodyLarge} ${styles.bodyLight} text-dark-primary mb-[4px]`}
-                >
-                  Sorry for the inconvenience.
-                </p>
-              </div>
-            </div>
-          )}
-          {currentEvents.length > 0 && (
-            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-[16px] overflow-hidden">
-              <AnimatePresence mode="wait">
-                {currentEvents.map((data) => (
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-[16px] overflow-hidden">
+            <AnimatePresence mode="wait">
+              {isLoading ? (
+                <>
+                  <SkeletonEvent />
+                  <SkeletonEvent />
+                  <SkeletonEvent />
+                </>
+              ) : (
+                currentEvents.map((data) => (
                   <motion.div
                     key={data.id}
                     className="flex flex-col pb-2 mb-4 duration-300 ease-in-out border-b-[1px]"
@@ -169,7 +154,7 @@ const SearchEvents = () => {
                           {data.industry}
                         </p>
                         <p
-                          className={`${styles.bodySm} ${styles.bodyBase} text-[#5E5E5E]`}
+                          className={`${styles.bodySm} ${styles.bodyBase} text-[rgb(94,94,94)]`}
                         >
                           <span className={`${styles.bodySemi}`}>
                             Organizer:
@@ -187,10 +172,28 @@ const SearchEvents = () => {
                       </div>
                     </Link>
                   </motion.div>
-                ))}
-              </AnimatePresence>
+                ))
+              )}
+            </AnimatePresence>
+          </div>
+
+          {/* {currentEvents.length === 0 && (
+            <div className="flex flex-col pb-2 mb-4 duration-300 ease-in-out border-b-[1px] h-2/2 justify-center items-center">
+              <div className="flex flex-col gap-[4px] p-[8px] text-center">
+                <h2 className={`${styles.headerLg}`}>😥</h2>
+                <h3
+                  className={`text-display-xxs sm:text-display-xs font-body text-dark-primary font-base`}
+                >
+                  We are currently looking for a Hackathon event.
+                </h3>
+                <p
+                  className={`${styles.bodyLarge} ${styles.bodyLight} text-dark-primary mb-[4px]`}
+                >
+                  Sorry for the inconvenience.
+                </p>
+              </div>
             </div>
-          )}
+          )} */}
           {filteredEvents.length > eventsPerPage && (
             <div className="flex justify-center mt-4">
               {Array.from({ length: totalPages }, (_, index) => (
