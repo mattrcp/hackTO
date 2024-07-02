@@ -50,7 +50,7 @@ const Footer = () => {
               href="https://www.instagram.com/trioto.team/?utm_source=ig_web_button_share_sheet"
               target="_blank"
             >
-              <FaInstagram className="w-[30px] h-auto" />
+              <FaInstagram className="w-6 sm:w-[30px] h-auto" />
             </Link>
           </div>
         </div>
