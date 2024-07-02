@@ -28,15 +28,15 @@ const itemVariants = {
     opacity: 0,
   },
 };
-function Links() {
+function Links({ open }) {
   return (
     <motion.div
-      className="absolute top-0 left-[50px] w-full h-full flex flex-col items-start justify-start py-[100px]"
+      className="absolute top-1/2 left-[50px] w-full h-[80%] flex flex-col items-start justify-start transform -translate-y-1/2"
       variants={variants}
     >
       <motion.div
         variants={itemVariants}
-        className="flex flex-col justify-between w-full h-[80%]"
+        className={`flex flex-col justify-between w-full h-full`}
       >
         <nav className=" flex items-start flex-col gap-[24px] sm:gap-[32px] ">
           <Link

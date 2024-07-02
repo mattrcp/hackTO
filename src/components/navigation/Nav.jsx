@@ -29,8 +29,8 @@ function Nav() {
   return (
     <motion.div
       className={`fixed z-[999] ${
-        open ? "bg-dark-primary" : "null"
-      }  flex flex-col align-middle top-0 justify-center  w-screen h-full ease-in-out duration-200 sm:hidden`}
+        open ? "bg-dark-primary h-full" : "null"
+      }  flex flex-col align-middle top-0 justify-center  w-screen  ease-in-out duration-200 sm:hidden`}
       variants={variants}
       animate={open ? "open" : "closed"}
     >
