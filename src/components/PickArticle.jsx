@@ -90,7 +90,7 @@ const PickArticle = () => {
                   className={`${styles.bodySm} ${styles.bodySemi}`}
                   target="_blank"
                 >
-                  Click here to read more about the article.
+                  Read more.
                 </Link>
               </div>
             </div>
