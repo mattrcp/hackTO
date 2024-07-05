@@ -136,8 +136,8 @@ const SearchEvents = () => {
                         <p
                           className={`${styles.bodySm} ${styles.bodySemi} text-[#5E5E5E]`}
                         >
-                          {data.date.day} {data.date.month} {data.date.year} at{" "}
-                          {data.time}
+                          {data.date.day} {data.date.month} {data.date.year}{" "}
+                          {data.time === "" ? "" : `at ${data.time}`}
                         </p>
                         <p
                           className={`${styles.bodySm} ${styles.bodyLight} text-[#5E5E5E] mb-[4px]`}
@@ -162,10 +162,18 @@ const SearchEvents = () => {
                           {data.organizer}
                         </p>
                         <div className="flex gap-[8px] mt-[16px]">
-                          <div className="px-[16px] py-[8px] bg-accent-tag-pink rounded-[8px] text-body-sm">
-                            {data.price}
+                          <div
+                            className={`${
+                              data.price === "" ? "" : "px-[16px] py-[8px]"
+                            } bg-accent-tag-pink rounded-[8px] text-body-sm`}
+                          >
+                            <p className={`${styles.bodyBase}`}>{data.price}</p>
                           </div>
-                          <div className="px-[16px] py-[8px] bg-accent-tag-yellow rounded-[8px] text-body-sm">
+                          <div
+                            className={`${
+                              data.reward === "" ? "" : "px-[16px] py-[8px]"
+                            }  bg-accent-tag-yellow rounded-[8px] text-body-sm`}
+                          >
                             {data.reward}
                           </div>
                         </div>
