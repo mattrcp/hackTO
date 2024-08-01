@@ -65,6 +65,16 @@ export async function GET() {
   }
 }
 
+export async function DELETE(req) {
+  const id = req.nextUrl.searchParams.get("id");
+  await connectArticleDB();
+  await Article.findByIdAndDelete(id);
+  return NextResponse.json(
+    { message: "Article deleted successfully" },
+    { status: 200 }
+  );
+}
+
 export async function OPTIONS() {
   const response = new NextResponse(null, { status: 204 });
   return setCORSHeaders(response);

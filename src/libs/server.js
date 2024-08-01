@@ -1,31 +1,25 @@
 import mongoose from "mongoose";
 
-const connectArticleDB = async () => {
+const connectDB = async (uri, name) => {
   try {
-    const articleDB = await mongoose.connect(process.env.MONGODB_URI_ARTICLE, {
+    const db = await mongoose.connect(uri, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
-    console.log("Connected to Article MongoDB 👍");
-    return articleDB;
+    console.log(`Connected to ${name} MongoDB 👍`);
+    return db;
   } catch (err) {
-    console.error("Error connecting to Article MongoDB:", err);
+    console.error(`Error connecting to ${name} MongoDB:`, err);
     throw err;
   }
 };
 
+const connectArticleDB = async () => {
+  return await connectDB(process.env.MONGODB_URI_ARTICLE, "Article");
+};
+
 const connectEventDB = async () => {
-  try {
-    const eventDB = mongoose.createConnection(process.env.MONGODB_URI_EVENT, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
-    console.log("Connected to Event MongoDB 👍");
-    return eventDB;
-  } catch (err) {
-    console.error("Error connecting to Event MongoDB:", err);
-    throw err;
-  }
+  return await connectDB(process.env.MONGODB_URI_EVENT, "Event");
 };
 
 export { connectArticleDB, connectEventDB };

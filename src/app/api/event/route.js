@@ -95,6 +95,13 @@ export async function GET() {
   }
 }
 
+export async function DELETE(req) {
+  const id = req.nextUrl.searchParams.get("id");
+  await connectEventDB();
+  await Event.findByIdAndDelete(id);
+  return NextResponse.json({ message: "Deleted event" }, { status: 200 });
+}
+
 export async function OPTIONS() {
   const response = new NextResponse(null, { status: 204 });
   return setCORSHeaders(response);
